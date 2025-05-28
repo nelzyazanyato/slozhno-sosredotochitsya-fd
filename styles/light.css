@@ -18,6 +18,7 @@
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
+   --cover-image: url("../images/cover-image-light.png");
 }
 
 .theme-light .rec-decoration {
@@ -35,6 +36,3 @@
   --hover__button: #32312d66;
 }
 
-.theme-light .cover__theme {
-  --cover-image: url("../images/cover-image-light.png");
-}

@@ -3,11 +3,13 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
-  min-inline-size: 375px;
+  background-image: var(--cover-image);
   background-color: var(--bg-color);
   font-family: var(--font-family);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+  font-size: var(--font-size);
 }
 
 .decorated-zone {
@@ -24,7 +26,7 @@
   border-left: 1px solid var(--accent-color);
   justify-self: start;
   align-self: end;
-  margin: 0 0 10px 10px;
+  margin: 0 0 var(--margin) var(--margin);
 }
 
 .decorated-zone::after {
@@ -47,21 +49,13 @@
   align-items: center;
   justify-items: center;
   min-block-size: var(--min-block-size);
-  max-block-size: 100vh;
+  max-block-size: 100dvh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   padding: 10px;
-  background-image: var(--background-image);
 }
 
-.cover__theme {
-  background-image: var(--cover-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 
 .header__theme-menu {
   justify-self: end;
@@ -82,7 +76,6 @@
 .header__theme-menu-button {
   background-color: transparent;
   font-weight: 400;
-  font-size: 1.125rem;
   line-height: 1.125rem;
   border: 0 none;
   text-align: center;
@@ -124,7 +117,6 @@
 .title {
   color: var(--color-text);
   font-weight: var(--font-weight);
-  font-size: var(--font-size);
   line-height: 23.4px;
 }
 
@@ -147,14 +139,12 @@
 .title-card {
   color: var(--accent-color);
   font-weight: var(--font-weight);
-  font-size: var(--font-size);
   line-height: calc(23.4 / 16 * 1rem);
 }
 
 .subline {
   color: var(--color-text);
   font-weight: var(--font-weight);
-  font-size: var(--font-size);
 }
 
 .subtitle {
@@ -165,7 +155,6 @@
   color: var(--p-text-color);
   margin-block-start: 10px;
   font-weight: 400;
-  font-size: var(--font-size);
 }
 
 .card__content__list {
@@ -175,7 +164,6 @@
 
 .subline-small {
   font-weight: 400;
-  font-size: var(--font-size);
   color: var(--color-text);
 }
 
@@ -201,7 +189,6 @@
 
 .galery-title {
   color: var(--color-text);
-  font-size: var(--font-size);
   font-weight: var(--font-weight);
 }
 
@@ -218,13 +205,13 @@
   align-items: center;
   justify-items: center;
   min-block-size: 668px;
-  max-block-size: 100vh;
+  max-block-size: 100dvh;
 }
 
 .footer-title {
   color: var(--title-color);
   font-weight: var(--font-weight);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--header__title);
   line-height: 83%;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
@@ -258,6 +245,7 @@
   .header__title {
     justify-self: start;
   }
+
   .header__title,
   .footer-title {
     --header__title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);

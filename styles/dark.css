@@ -15,7 +15,7 @@
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
 
-.rec-decoration {
+.theme-dark .rec-decoration {
   position: absolute;
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@
   margin-inline-end: 19px;
 }
 
-.rec-decoration::after {
+.theme-dark .rec-decoration::after {
   content: "";
   background-color: var(--accent-color);
   inline-size: 9px;
