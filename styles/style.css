@@ -2,4 +2,350 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+
+  min-inline-size: 375px;
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  background-position: center;
+  background-size: cover;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  position: absolute;
+  content: "";
+  inline-size: 25px;
+  height: 25px;
+  display: inline-block;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  justify-self: start;
+  align-self: end;
+  margin: 0 0 10px 10px;
+}
+
+.decorated-zone::after {
+  position: absolute;
+  content: "";
+  inline-size: 25px;
+  height: 25px;
+  display: inline-block;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  justify-self: end;
+  align-self: start;
+  margin: var(--margin) var(--margin) 0 0;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  justify-items: center;
+  min-block-size: var(--min-block-size);
+  max-block-size: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 10px;
+  background-image: var(--background-image);
+}
+
+.cover__theme {
+  background-image: var(--cover-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  height: 26px;
+  width: 70px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  border: 0 none;
+  text-align: center;
+  color: var(--accent-color);
+  width: 100%;
+  height: 100%;
+  padding: 0 0 4px 0;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover__button);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__title {
+  font-weight: var(--font-weight);
+  font-size: var(--header__title);
+  justify-self: center;
+  align-self: center;
+  line-height: 83%;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.overlay {
+  background-image: var(--cover-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.title {
+  color: var(--color-text);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: 23.4px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.content-section {
+  display: grid;
+  gap: 20px;
+}
+
+.content {
+  margin-block-start: 40px;
+  margin-inline: var(--margin);
+  gap: 50px;
+  display: grid;
+}
+
+.title-card {
+  color: var(--accent-color);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: calc(23.4 / 16 * 1rem);
+}
+
+.subline {
+  color: var(--color-text);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+}
+
+.subtitle {
+  grid-column: span 2;
+}
+
+.title-card__text {
+  color: var(--p-text-color);
+  margin-block-start: 10px;
+  font-weight: 400;
+  font-size: var(--font-size);
+}
+
+.card__content__list {
+  display: grid;
+  gap: 20px;
+}
+
+.subline-small {
+  font-weight: 400;
+  font-size: var(--font-size);
+  color: var(--color-text);
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--p-text-color);
+}
+
+.link:focus {
+  outline: none;
+  border: 1px solid var(--p-text-color);
+}
+
+.galery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.galery-title {
+  color: var(--color-text);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.galery img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.footer {
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  min-block-size: 668px;
+  max-block-size: 100vh;
+}
+
+.footer-title {
+  color: var(--title-color);
+  font-weight: var(--font-weight);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.card__content_other {
+  display: grid;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0;
+  }
+
+  .header,
+  .footer {
+    --min-block-size: 1024px;
+  }
+  .header__theme-menu {
+    margin-inline-end: 20px;
+    margin-block-start: 20px;
+  }
+
+  .title {
+    justify-self: end;
+    margin-inline-end: 20px;
+    margin-block-end: 12px;
+    inline-size: 364px;
+  }
+
+  .header__title {
+    justify-self: start;
+  }
+  .header__title,
+  .footer-title {
+    --header__title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .decorated-zone::before,
+  .decorated-zone::after {
+    --margin: 20px;
+  }
+
+  .content {
+    --margin: 20px;
+    margin-block: 60px;
+    gap: 80px;
+  }
+
+  .similar-section {
+    grid-template-columns: var(--grid-template-columns);
+  }
+
+  .card__content {
+    grid-column: span 2;
+    width: 100%;
+  }
+
+  .title-card {
+    inline-size: 236px;
+    grid-row: span 2;
+  }
+
+  .galery {
+    grid-template-columns: var(--grid-template-columns);
+    gap: 20px;
+  }
+
+  .galery-title {
+    grid-column: span 3;
+  }
+
+  .img__sunset {
+    grid-column: span 2;
+  }
+
+  .img__ice-cream {
+    grid-row: span 2;
+  }
+
+  .img__books {
+    justify-self: center;
+  }
+
+  .img__tape {
+    grid-row: span 2;
+  }
+
+  .img__street {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header,
+  .footer {
+    --min-block-size: 768px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    margin-inline: 0;
+    margin-block-start: 20px;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .title {
+    inline-size: 491px;
+  }
+
+  .title-card {
+    inline-size: 315px;
+  }
+
+  .card__content_other {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    align-items: start;
+  }
 }
