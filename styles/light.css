@@ -10,29 +10,31 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff8dcb;
+  --color-text-on-accent: #353430;
   --bg-color: #fff1f7;
   --title-color: #ffc2e6;
-  --color-text: #353430;
-  --p-text-color: #353430;
-}
-
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-   --cover-image: url("../images/cover-image-light.png");
+  --color-text: var(--color-text-on-accent);
+  --p-text-color: var(--color-text-on-accent);
+  --background-image: url("../images/cover-image-light.png");
+  --hover-button: #32312d66;
 }
 
 .theme-light .rec-decoration {
   display: none;
 }
 
-.theme-light .header__theme-menu-button,
-.theme-light .title-card,
-.theme-light .decorated-zone::after,
-.theme-light .decorated-zone::before {
-  --accent-color: #353430;
+@media (prefers-color-scheme: light) {
+  .rec-decoration {
+    display: none;
+  }
+  :root {
+    --accent-color: #ff8dcb;
+    --color-text-on-accent: #353430;
+    --bg-color: #fff1f7;
+    --title-color: #ffc2e6;
+    --color-text: var(--color-text-on-accent);
+    --p-text-color: var(--color-text-on-accent);
+    --background-image: url("../images/cover-image-light.png");
+    --hover-button: #32312d66;
+  }
 }
-
-.theme-light .header__theme-menu-button:hover {
-  --hover__button: #32312d66;
-}
-

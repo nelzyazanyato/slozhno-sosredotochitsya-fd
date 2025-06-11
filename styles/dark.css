@@ -9,42 +9,16 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --background-image: url("../images/cover-image-dark.png");
+  --accent-color: #ff0070;
+  --color-text-on-accent: #ff0070;
+  --bg-color: #000028;
+  --title-color: #db00ff;
+  --color-text: #000028;
+  --p-text-color: #f1b2ce;
+  --hover-button: #ff007066;
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
-
- .rec-decoration {
-  position: absolute;
+.theme-dark .rec-decoration {
   display: flex;
-  align-items: center;
-  color: var(--accent-color);
-  font-size: 1.125rem;
-  font-family: var(--font-family);
-  font-weight: 400;
-  top: 10px;
-  line-height: 25px;
-  justify-self: end;
-  margin-inline-end: 19px;
-}
-
-.rec-decoration::after {
-  content: "";
-  background-color: var(--accent-color);
-  inline-size: 9px;
-  height: 9px;
-  background-position: center;
-  display: inline-block;
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--accent-color);
-  align-self: center;
-  margin-left: 9px;
-}
-
-@media (width >= 768px) {
-  .rec-decoration {
-    margin-top: 10px;
-    right: 10px;
-  }
 }
