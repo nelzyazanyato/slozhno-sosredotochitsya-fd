@@ -17,16 +17,10 @@
   --p-text-color: var(--color-text-on-accent);
   --background-image: url("../images/cover-image-light.png");
   --hover-button: #32312d66;
-}
-
-.theme-light .rec-decoration {
-  display: none;
+  --display: none;
 }
 
 @media (prefers-color-scheme: light) {
-  .rec-decoration {
-    display: none;
-  }
   :root {
     --accent-color: #ff8dcb;
     --color-text-on-accent: #353430;
@@ -36,5 +30,6 @@
     --p-text-color: var(--color-text-on-accent);
     --background-image: url("../images/cover-image-light.png");
     --hover-button: #32312d66;
+    --display: none;
   }
 }

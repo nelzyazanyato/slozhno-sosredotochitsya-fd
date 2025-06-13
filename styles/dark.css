@@ -17,8 +17,5 @@
   --color-text: #000028;
   --p-text-color: #f1b2ce;
   --hover-button: #ff007066;
-}
-
-.theme-dark .rec-decoration {
-  display: flex;
+  --display: flex;
 }

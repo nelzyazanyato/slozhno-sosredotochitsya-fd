@@ -15,8 +15,10 @@
   --color-text: #000028;
   --p-text-color: #f1b2ce;
   --title-color: #db00ff;
-  --hover-button: #ff007066;
+  --hover-button: #FF007066;
   --min-block-size: 668px;
   --header-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --grid-template-columns: repeat(3, 1fr);
+  --display: flex;
 }
+
